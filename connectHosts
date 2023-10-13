@@ -1,0 +1,3 @@
+#!/bin/bash
+
+./listHosts $1 | while read -r host; do tmux new -d -s $host; tmux send-keys -t $host "ssh $host" ENTER; done

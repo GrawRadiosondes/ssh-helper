@@ -1,0 +1,3 @@
+#!/bin/bash
+
+grep -P "^Host ([^*]+)$" "$HOME/.ssh/config.d/${1:-../config}" | sed 's/Host //'
